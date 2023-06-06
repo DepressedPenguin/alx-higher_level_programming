@@ -2,5 +2,8 @@
 # task8
 
 def uppercase(str):
-	if str >= 'A' or str <= 'Z':
-		return str
+    for x in str:
+        if ord('a') <= ord(x) <= ord('z'):
+            x = chr(ord(x) - 32)
+        print("{:s}".format(x), end="")
+    print()
