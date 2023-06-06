@@ -7,9 +7,9 @@ number = random.randint(-10000, 10000)
 
 lastofdigit = abs(number) % 10
 
-if int(lastofdigit) > 5:
+if lastofdigit > 5:
     print(f"Last digit of {number} is {lastofdigit} and is greater than 5")
-elif int(lastofdigit) == 0:
+elif lastofdigit == 0:
     print(f"Last digit of {number} is {lastofdigit} and is 0")
 elif lastofdigit < 6 and lastofdigit != 0:
     print("Last digit of {} is {} and is less than 6 "
