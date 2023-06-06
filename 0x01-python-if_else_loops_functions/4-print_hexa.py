@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 
-for i in range(0,99):
-    print(i,"=",hex(i))
+for c in range(0, 99):
+    print("{}={}".format(c, hex(c)), end='\n')
