@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 #!/usr/bin/python3
+
 def print_matrix_integer(matrix=[[]]):
-    for x in matrix:
-        for i in range(len(x)):
-            if i == len(x) - 1:
-                print("{:d}".format(x[i]))
+    for w in matrix:
+        for z in w:
+            if z == w[-1]:
+                print('{:d}'.format(z), end='')
             else:
-                print("{:d}".format(x[i]), end=' ')
-    if not matrix:
+                print('{:d}'.format(z), end=' ')
         print()
