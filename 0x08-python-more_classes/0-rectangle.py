@@ -1,6 +1,9 @@
 #!/usr/bin/python3
-#!/usr/bin/python3
-""" Define Rectangle """
+""" Define Rectangle
+"""
+
+
 class Rectangle:
-""" Nothing here """
+    """Nothing here
+    """
     pass
