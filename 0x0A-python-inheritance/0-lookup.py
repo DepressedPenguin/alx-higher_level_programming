@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-"""My Lookup Function"""
+""" My lookup function """
 
 
 def lookup(obj):
+    """returns list methods and attr of an object"""
     return dir(object)
