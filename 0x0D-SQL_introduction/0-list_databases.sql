@@ -1,0 +1,2 @@
+-- Show data
+SHOW DATABASES;
