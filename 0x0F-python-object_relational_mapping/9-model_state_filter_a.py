@@ -9,11 +9,12 @@ import sys
 
 if __name__ == "__main__":
     connect = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
-                           .format(sys.argv[1], sys.argv[2], sys.argv[3]),
-                           pool_pre_ping=True)
+                            .format(sys.argv[1], sys.argv[2], sys.argv[3]),
+                            pool_pre_ping=True)
     Session = sessionmaker(bind=connect)
     new_session = Session()
-    my_query = new_session.query(State).filter(State.name.startswith("%a%")).order_by(State.id.asc()).all()
+    my_query = new_session.query(State).filter(
+        State.name.startswith("%a%")).order_by(State.id.asc()).all()
     if not my_query:
         print("Nothing")
     else:
