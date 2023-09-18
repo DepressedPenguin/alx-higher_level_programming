@@ -2,7 +2,7 @@
 """INSERT ELEMENT INSIDE TABLE"""
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from model_state import Base, State  # Make sure to import your Base and State from the model_state modulei
+from model_state import Base, State
 import sys
 
 if __name__ == "__main__":
@@ -11,7 +11,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=connect)
     new_session = Session()
 
-    existing_state = new_session.query(State).filter(State.name == 'Louisiana').first()
+    existing_state = new_session.query(State).filter
+    (State.name == 'Louisiana').first()
     if not existing_state:
         add_to = State(name='Louisiana')
         new_session.add(add_to)
@@ -20,4 +21,3 @@ if __name__ == "__main__":
     ret = new_session.query(State).filter(State.name == 'Louisiana').first()
     if ret:
         print(ret.id)
-
