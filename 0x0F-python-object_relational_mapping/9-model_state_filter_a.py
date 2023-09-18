@@ -13,10 +13,7 @@ if __name__ == "__main__":
                             pool_pre_ping=True)
     Session = sessionmaker(bind=connect)
     new_session = Session()
-    my_query = new_session.query(State).filter(
-        State.name.startswith("%a%")).order_by(State.id.asc()).all()
-    if not my_query:
-        print("Nothing")
-    else:
-        for state in my_query:
-            print(state.id, state.name, sep=": ")
+    query_s = new_session.query(State).filter(
+        State.name.like("%a%")).order_by(State.id.asc()).all()
+    for x in query_s:
+        print(x.id, x.name, sep=": ")
