@@ -15,4 +15,4 @@ if __name__ == "__main__":
 
     state_to_update.name = 'New Mexico'
     session.commit()
-    "print(state_to_update.name)"
+    print(state_to_update.name)
