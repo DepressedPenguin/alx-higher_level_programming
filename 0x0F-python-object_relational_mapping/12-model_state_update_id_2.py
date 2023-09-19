@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Change State Name"""
 from sqlalchemy import *
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
@@ -15,4 +16,4 @@ if __name__ == "__main__":
 
     state_to_update.name = 'New Mexico'
     session.commit()
-    print(state_to_update.name)
+    "print(state_to_update.name)"
