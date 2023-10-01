@@ -1,12 +1,13 @@
 #!/usr/bin/python3
-"""Post with email"""
+"""Post req with Email"""
 import urllib.request
+import urllib.parse
 import sys
 
 if __name__ == "__main__":
-    url_email = sys.argv[3]
-    enc = url_email.encode('utf-8')
-    request = urllib.request.Request(sys.argv[1], data=enc, method='POST')
-    with urllib.request.urlopen(request) as re:
-        content = re.read().decode('ascii')
+    args = sys.argv
+    data_encoded = urllib.parse.urlencode({'email': args[2]}).encode("utf-8")
+    post_request = urllib.request.Request(args[1], data_encoded, method="POST")
+    with urllib.request.urlopen(post_request) as response:
+        content = response.read().decode("utf-8")
         print(content)
