@@ -1,17 +1,13 @@
 #!/usr/bin/python3
-"""DISPLAY BODY WITH REQUEST"""
-import sys
+"""POST WITH REQUEST"""
 import requests
+import sys
 
 if __name__ == "__main__":
-    url = sys.argv[1]
-
+    args = sys.argv
     try:
-        response = requests.get(url)
+        response = requests.get(args[1])
         response.raise_for_status()
-
-        content = response.text
-        print(content)
-
-    except requests.exceptions.RequestException as e:
-        print(f"Error code: {e.response.status_code}")
+        print(response.text)
+    except requests.exceptions.RequestException as exception:
+        print(f"Error code: {exception.response.status_code}")
