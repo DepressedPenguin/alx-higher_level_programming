@@ -1,11 +1,10 @@
 #!/usr/bin/node
 const fs = require('fs');
 
-function write_me(filename, string) {
+function Writeme (filename, string) {
   fs.writeFile(filename, string, 'utf8', (err) => {
     if (err) {
       console.error(err);
-      return;
     }
   });
 }
@@ -18,5 +17,4 @@ if (!filename || !stringToWrite) {
   process.exit(1);
 }
 
-write_me(filename, stringToWrite);
-
+Writeme(filename, stringToWrite);
