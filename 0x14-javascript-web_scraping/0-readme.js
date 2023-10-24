@@ -1,7 +1,7 @@
 #!/usr/bin/node
 const fs = require('fs');
 
-function read_inside_file(filename) {
+function readInsideFile (filename) {
   fs.readFile(filename, 'utf8', (err, data) => {
     if (err) {
       console.error(err);
@@ -15,4 +15,4 @@ if (!filename) {
   console.error('Usage: node script.js <filename>');
   process.exit(1);
 }
-read_inside_file(filename);
+readInsideFile(filename);
